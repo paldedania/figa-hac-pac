@@ -1,34 +1,12 @@
-/* Emergency help: call information and the downloadable medicine list. */
-.app-shell { min-height: max(100vh, 1304px); }
-.emergency-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 24px; align-items: start; }
-.emergency-call h2 { display: flex; align-items: center; gap: 16px; }
-.emergency-call h2 .icon { color: var(--danger); width: 32px; height: 32px; flex-basis: 32px; }
-.emergency-instruction { font-size: 24px; font-weight: 700; line-height: 1.45; }
-.emergency-number { display: flex; align-items: center; gap: 24px; margin-bottom: 24px; }
-.emergency-number > strong { font-size: 48px; color: var(--accent); }
-.emergency-number p { margin-top: 8px; }
-.emergency-call > .muted { margin-top: 24px; }
-.emergency-contact h3, .emergency-contact > p { margin-bottom: 16px; }
-.emergency-contact .button { margin-top: 16px; }
-.emergency-contact .divider { margin: 16px 0; }
-.emergency-contact > p:last-child { margin-bottom: 0; }
-.emergency-medicines { margin-top: 32px; }
-.emergency-medicines .section-heading { padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
-.emergency-medicines .section-heading p { margin-top: 8px; }
-.medicine-table { width: 100%; border-collapse: collapse; text-align: left; }
-.medicine-table th, .medicine-table td { padding: 8px 0; }
-.medicine-table th { width: 52%; }
-.medicine-table th > span { display: inline-flex; vertical-align: middle; }
-.medicine-table td { color: var(--muted); }
-.medicine-table td:last-child { padding-left: 24px; }
-.compact-art { display: inline-grid !important; place-items: center; width: 48px; height: 48px; background: var(--raised); border-radius: 8px; margin-right: 24px; }
-.compact-art img { width: 32px; height: 32px; }
-.emergency-warning { margin-top: 32px; font-weight: 700; }
-.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-@media (max-width: 1100px) { .emergency-layout { grid-template-columns: 1fr; } .emergency-medicines .section-heading { flex-wrap: wrap; } }
-@media (max-width: 800px) { .app-shell { min-height: 100vh; } }
-@media (max-width: 600px) {
-  .medicine-table-wrap { overflow-x: auto; }
-  .medicine-table { min-width: 660px; font-size: 17px; }
-  .emergency-number { gap: 16px; }
-}
+/* Emergency numbers and the medicine table. */
+.emergency-layout { display: grid; grid-template-columns: 1.65fr 1fr; gap: 24px; }
+.emergency-number { display: grid; grid-template-columns: 90px 1fr; gap: 16px; margin-bottom: 24px; }
+.emergency-number .accent { font-size: 48px; }
+.emergency-layout .button { margin-top: 16px; }
+.table-container { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 12px 8px; border-top: 1px solid #43566f; }
+td { color: #bac7d9; }
+.small-image { width: 48px; height: 48px; padding: 6px; background-color: #24384f; border-radius: 6px; margin-right: 12px; }
+@media (max-width: 1100px) { .emergency-layout { grid-template-columns: 1fr; } }
+@media (max-width: 800px) { table { min-width: 680px; } }

@@ -1,13 +1,4 @@
-/* Add medicine: the form and its instructions panel. */
-.app-shell { min-height: max(100vh, 1181px); }
-.add-medicine-layout { display: grid; grid-template-columns: minmax(0, 2.05fr) minmax(0, 1fr); gap: 24px; align-items: start; }
-.medicine-form { display: grid; gap: 24px; }
-.medicine-form > h2 { margin-bottom: 4px; }
-.form-actions { display: flex; flex-wrap: wrap; gap: 16px; border-top: 1px solid var(--border); padding-top: 24px; }
-.before-save > p { margin-top: 24px; }
-.before-save .art-tile { width: 96px; height: 96px; }
-.info-note { display: flex; gap: 16px; align-items: flex-start; }
-.info-note .icon { color: var(--accent); }
-.before-save .divider { margin: 24px 0; }
-@media (max-width: 1000px) { .add-medicine-layout { grid-template-columns: 1fr; } }
-@media (max-width: 800px) { .app-shell { min-height: 100vh; } }
+/* Add medicine: form and label instructions. */
+.add-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.add-layout aside { height: auto; }
+@media (max-width: 1100px) { .add-layout { grid-template-columns: 1fr; } }

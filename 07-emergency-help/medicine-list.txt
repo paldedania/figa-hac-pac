@@ -1,0 +1,8 @@
+MedRemind sample medicine list
+Eleanor Brooks
+
+Lisinopril 10 mg - 1 tablet daily - 8:00 AM
+Metformin 500 mg - 1 tablet daily with food - 1:00 PM
+Atorvastatin 20 mg - 1 tablet daily - 8:00 PM
+
+Fictional demonstration records.

@@ -1,32 +1,22 @@
-/* Today: medicine cards and the right-hand summary column. */
-.today-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 24px; }
-.today-summary { align-content: start; }
-.dose-list { gap: 16px; }
-.dose-card { padding: 20px; }
-.dose-details { display: flex; align-items: center; gap: 16px; }
-.dose-card .medicine-name { min-width: 0; }
-.dose-card .medicine-name h3 { font-size: 24px; }
-.dose-time { margin-left: auto; white-space: nowrap; font-size: 18px; }
-.dose-actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid var(--border); margin-top: 20px; padding-top: 16px; }
-.dose-status { display: inline-flex; align-items: center; gap: 8px; }
-.dose-actions .button { min-height: 56px; padding: 12px 18px; }
-.progress-count { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
-.progress-bars { display: flex; gap: 8px; margin: 16px 0; }
-.progress-bars span { height: 12px; flex: 1; border-radius: 6px; background: #50647e; }
-.progress-bars .complete { background: var(--accent); }
-.doctor-inline { display: flex; align-items: center; gap: 12px; }
-.doctor-inline img { width: 80px; height: 80px; }
-.doctor-inline p { margin-top: 8px; }
-.appointment-summary .divider { margin-block: 20px; }
-.appointment-summary .button { margin-top: 20px; }
-@media (max-width: 1250px) {
-  .today-layout { grid-template-columns: 1fr; }
-  .today-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
-}
-@media (max-width: 560px) {
-  .today-summary { grid-template-columns: 1fr; }
-  .dose-details { flex-wrap: wrap; }
-  .dose-time { flex-basis: 100%; margin-left: 96px; }
-  .dose-actions { flex-wrap: wrap; }
-  .dose-actions .button { width: 100%; }
+/* Today: medicine cards beside the summary. */
+.today-layout { display: grid; grid-template-columns: 1.65fr 1fr; gap: 24px; }
+.dose-top { display: grid; grid-template-columns: 80px 1fr 90px; gap: 16px; }
+.dose-top h3 { font-size: 22px; }
+.dose-time { font-size: 18px; padding-top: 24px; }
+.dose-bottom { display: flex; justify-content: space-between; border-top: 1px solid #43566f; padding-top: 16px; margin-top: 20px; }
+.dose-bottom strong { padding-top: 12px; }
+.progress-number { font-size: 32px; font-weight: bold; }
+.progress-bars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 16px 0; }
+.progress-bars span { display: block; height: 12px; border-radius: 6px; background-color: #50647e; }
+.progress-bars .complete { background-color: #59d4bf; }
+.doctor-row { display: grid; grid-template-columns: 80px 1fr; gap: 16px; }
+.doctor-row .portrait { width: 80px; height: 80px; }
+.today-layout .full { margin-top: 20px; }
+@media (max-width: 1250px) { .today-layout { grid-template-columns: 1fr; } }
+@media (max-width: 500px) {
+    .dose-top { grid-template-columns: 64px 1fr; }
+    .dose-top .card-image { width: 64px; height: 64px; }
+    .dose-time { padding-top: 0; }
+    .dose-bottom { display: block; }
+    .dose-bottom .button { display: block; margin-top: 12px; width: 100%; }
 }
