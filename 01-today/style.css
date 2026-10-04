@@ -1,22 +1,124 @@
-/* Today: medicine cards beside the summary. */
-.today-layout { display: grid; grid-template-columns: 1.65fr 1fr; gap: 24px; }
-.dose-top { display: grid; grid-template-columns: 80px 1fr 90px; gap: 16px; }
-.dose-top h3 { font-size: 22px; }
-.dose-time { font-size: 18px; padding-top: 24px; }
-.dose-bottom { display: flex; justify-content: space-between; border-top: 1px solid #43566f; padding-top: 16px; margin-top: 20px; }
-.dose-bottom strong { padding-top: 12px; }
-.progress-number { font-size: 32px; font-weight: bold; }
-.progress-bars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 16px 0; }
-.progress-bars span { display: block; height: 12px; border-radius: 6px; background-color: #50647e; }
-.progress-bars .complete { background-color: #59d4bf; }
-.doctor-row { display: grid; grid-template-columns: 80px 1fr; gap: 16px; }
-.doctor-row .portrait { width: 80px; height: 80px; }
-.today-layout .full { margin-top: 20px; }
-@media (max-width: 1250px) { .today-layout { grid-template-columns: 1fr; } }
+/* .today-layout: used on Today; places the daily medicine cards beside the summary cards. */
+.today-layout {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 24px;
+}
+
+/* .dose-top: used on Today; places the medicine image, description and time in three columns. */
+.dose-top {
+    display: grid;
+    grid-template-columns: 80px 1fr 90px;
+    gap: 16px;
+}
+
+/* .dose-top h3: used on Today; sets the medicine-name heading size inside a daily dose card. */
+.dose-top h3 {
+    font-size: 22px;
+}
+
+/* .dose-time: used on Today; sizes and vertically positions the scheduled dose time. */
+.dose-time {
+    font-size: 18px;
+    padding-top: 24px;
+}
+
+/* .dose-bottom: used on Today; separates the dose status and action in a bordered row. */
+.dose-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #43566f;
+    padding-top: 16px;
+    margin-top: 20px;
+}
+
+/* .dose-bottom strong: used on Today; aligns the dose status with the button text. */
+.dose-bottom strong {
+    padding-top: 12px;
+}
+
+/* .progress-number: used on Today; makes the daily progress count larger and bold. */
+.progress-number {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* .progress-bars: used on Today; arranges the three daily progress segments with equal widths and gaps. */
+.progress-bars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+/* .progress-bars span: used on Today; draws each rounded progress segment in the remaining-dose color. */
+.progress-bars span {
+    display: block;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #50647e;
+}
+
+/* .progress-bars .complete: used on Today; colors the completed-dose segment mint. */
+.progress-bars .complete {
+    background-color: #59d4bf;
+}
+
+/* .doctor-row: used on Today; places the next-appointment portrait beside the doctor details. */
+.doctor-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+}
+
+/* .doctor-row .portrait: used on Today; fits the doctor portrait into the next-appointment row. */
+.doctor-row .portrait {
+    width: 80px;
+    height: 80px;
+}
+
+/* .today-layout .full: used on Today; separates the View appointments link from the appointment details. */
+.today-layout .full {
+    margin-top: 20px;
+}
+
+/* @media (max-width: 1250px): applies the following layout changes on screens up to 1250px wide. */
+@media (max-width: 1250px) {
+    /* .today-layout: used on Today; stacks the medicine list and summary cards in one column on screens up to 1250px. */
+    .today-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* @media (max-width: 500px): applies the following layout changes on screens up to 500px wide. */
 @media (max-width: 500px) {
-    .dose-top { grid-template-columns: 64px 1fr; }
-    .dose-top .card-image { width: 64px; height: 64px; }
-    .dose-time { padding-top: 0; }
-    .dose-bottom { display: block; }
-    .dose-bottom .button { display: block; margin-top: 12px; width: 100%; }
+    /* .dose-top: used on Today; puts the medicine image and description in two columns, with time on the next row on screens up to 500px. */
+    .dose-top {
+        grid-template-columns: 64px 1fr;
+    }
+
+    /* .dose-top .card-image: used on Today; reduces the medicine image size on screens up to 500px. */
+    .dose-top .card-image {
+        width: 64px;
+        height: 64px;
+    }
+
+    /* .dose-time: used on Today; removes the top spacing from the dose time on screens up to 500px. */
+    .dose-time {
+        padding-top: 0;
+    }
+
+    /* .dose-bottom: used on Today; stacks the dose status and action on screens up to 500px. */
+    .dose-bottom {
+        display: block;
+    }
+
+    /* .dose-bottom .button: used on Today; places the dose action on its own full-width row on screens up to 500px. */
+    .dose-bottom .button {
+        display: block;
+        margin-top: 12px;
+        width: 100%;
+    }
+
 }

@@ -1,8 +1,46 @@
-/* Health readings and expandable report previews. */
-.reading-title { margin-bottom: 24px; }
-.readings { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.reading-value { font-size: 32px; }
-.report-row { display: grid; grid-template-columns: 80px 1fr 170px; gap: 24px; }
-.report-row summary { cursor: pointer; }
-@media (max-width: 1150px) { .report-row { grid-template-columns: 1fr; } }
-@media (max-width: 800px) { .readings { grid-template-columns: 1fr; } }
+/* .reading-title: used on Health history; separates Recent health readings from the reading cards. */
+.reading-title {
+    margin-bottom: 24px;
+}
+
+/* .readings: used on Health history; places the two recent health-reading cards side by side. */
+.readings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* .reading-value: used on Health history; makes the measured health-reading number larger. */
+.reading-value {
+    font-size: 32px;
+}
+
+/* .report-row: used on Health history; places the report image, document details and preview control in columns. */
+.report-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 170px;
+    gap: 24px;
+}
+
+/* .report-row summary: used on Health history; shows a pointer cursor over the report-preview heading. */
+.report-row summary {
+    cursor: pointer;
+}
+
+/* @media (max-width: 1150px): applies the following layout changes on screens up to 1150px wide. */
+@media (max-width: 1150px) {
+    /* .report-row: used on Health history; stacks the report image, details and preview on screens up to 1150px. */
+    .report-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* @media (max-width: 800px): applies the following layout changes on screens up to 800px wide. */
+@media (max-width: 800px) {
+    /* .readings: used on Health history; stacks the two health-reading cards on screens up to 800px. */
+    .readings {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,8 +1,50 @@
-/* Profile information beside the standard HTML controls. */
-.profile-layout { display: grid; grid-template-columns: 2fr 3fr; gap: 24px; }
-.profile-card h3 { margin-top: 16px; }
-fieldset { border: 0; padding: 0; margin: 0; }
-legend { font-weight: bold; margin-bottom: 12px; }
-.choice { display: block; background-color: #0b1426; border: 1px solid #43566f; border-radius: 6px; padding: 12px; margin-bottom: 12px; }
-.choice input { width: 18px; height: 18px; vertical-align: middle; }
-@media (max-width: 1100px) { .profile-layout { grid-template-columns: 1fr; } }
+/* .profile-layout: used on Profile & accessibility; places profile and emergency-contact cards beside the preference form. */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 24px;
+}
+
+/* .profile-card h3: used on Profile & accessibility; separates the profile name from its portrait. */
+.profile-card h3 {
+    margin-top: 16px;
+}
+
+/* fieldset: used on Profile & accessibility; removes the default border and spacing around the text-size options. */
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* legend: used on Profile & accessibility; emphasizes and separates the Text size group label. */
+legend {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* .choice: used on Profile & accessibility; gives each accessibility or reminder option a padded dark row. */
+.choice {
+    display: block;
+    background-color: #0b1426;
+    border: 1px solid #43566f;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+/* .choice input: used on Profile & accessibility; sizes radio buttons and checkboxes and aligns them with their option text. */
+.choice input {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* @media (max-width: 1100px): applies the following layout changes on screens up to 1100px wide. */
+@media (max-width: 1100px) {
+    /* .profile-layout: used on Profile & accessibility; stacks the profile cards and preference controls on screens up to 1100px. */
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+}

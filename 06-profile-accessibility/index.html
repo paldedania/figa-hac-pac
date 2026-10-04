@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile &amp; accessibility | MedRemind</title>
-    <link rel="icon" href="../01-today/assets/logo.png">
-    <!-- Shared styles first, then this page's styles. -->
-    <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="site">
-        <!-- The same sidebar links appear on all seven pages. -->
-        <aside class="sidebar">
-            <a class="brand" href="../index.html"><img class="logo" src="../01-today/assets/logo.png" alt="">MedRemind</a>
-            <nav class="navigation">
+    <!-- head: sets the page title, character encoding, mobile viewport, icon and stylesheet links. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile &amp; accessibility | MedRemind</title>
+        <link rel="icon" href="../01-today/assets/logo.png">
+        <!-- Loads global.css for shared styles on every page. -->
+        <link rel="stylesheet" href="../global.css">
+        <!-- Loads this page's style.css for the Profile & accessibility layout. -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- body: contains the visible Profile & accessibility page. -->
+    <body>
+        <!-- div.site: contains the sidebar and the main content column for this page. -->
+        <div class="site">
+            <!-- aside.sidebar: contains the brand, page navigation and account details. -->
+            <aside class="sidebar">
+                <!-- a.brand: groups the logo and MedRemind name in a link back to Today. -->
+                <a class="brand" href="../index.html"><img class="logo" src="../01-today/assets/logo.png" alt="">MedRemind</a>
+                <!-- nav.navigation: contains links to all seven pages; active marks this page and emergency-link outlines Emergency help. -->
+                <nav class="navigation">
                     <a class="" href="../index.html">Today</a>
                     <a class="" href="../02-my-medicines/index.html">My medicines</a>
                     <a class="" href="../03-add-medicine/index.html">Add medicine</a>
@@ -22,66 +28,88 @@
                     <a class="" href="../05-health-history/index.html">Health history &amp; reports</a>
                     <a class="active" href="../06-profile-accessibility/index.html">Profile &amp; accessibility</a>
                     <a class="emergency-link" href="../07-emergency-help/index.html">Emergency help</a>
-            </nav>
-            <div class="account">
-                <img class="avatar" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
-                <strong>Eleanor Brooks</strong>
-                <p class="muted">Personal account</p>
-            </div>
-        </aside>
-        <div class="content">
-            <header class="topbar">
-                <p class="muted">Personal health tracker</p>
-                <strong>Demonstration account</strong>
-            </header>
-            <main>
-                <div class="page-heading">
-                    <h1>Profile &amp; accessibility</h1>
-                    <p class="subtitle">Your details and preferences, set up for you.</p>
+                </nav>
+                <!-- div.account: groups Eleanor Brooks's picture, name and account description. -->
+                <div class="account">
+                    <img class="avatar" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
+                    <strong>Eleanor Brooks</strong>
+                    <p class="muted">Personal account</p>
                 </div>
-                <div class="profile-layout">
-                    <div>
-                        <section class="card profile-card">
-                            <h2>Your profile</h2>
-                            <img class="portrait" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
-                            <h3>Eleanor Brooks</h3>
-                            <p class="muted">Fictional patient &bull; Personal account</p>
-                        </section>
-                        <section class="card">
-                            <h2>Emergency contact</h2>
-                            <h3>Anna Brooks</h3>
-                            <p class="muted">Daughter</p>
-                            <p>(202) 555-0146</p>
-                            <hr class="divider">
-                            <p class="muted">This contact is also shown in Emergency help.</p>
-                        </section>
+            </aside>
+            <!-- div.content: contains the top bar, main page sections and footer beside the sidebar. -->
+            <div class="content">
+                <!-- header.topbar: groups the tracker label and demonstration-account label. -->
+                <header class="topbar">
+                    <p class="muted">Personal health tracker</p>
+                    <strong>Demonstration account</strong>
+                </header>
+                <!-- main: contains the Profile & accessibility page content after the shared top bar. -->
+                <main>
+                    <!-- div.page-heading: groups the page title and subtitle. -->
+                    <div class="page-heading">
+                        <h1>Profile &amp; accessibility</h1>
+                        <p class="subtitle">Your details and preferences, set up for you.</p>
                     </div>
-                    <!-- Radio buttons and checkboxes are standard HTML controls. -->
-                    <form>
-                        <section class="card">
-                            <h2>Accessibility</h2>
-                            <fieldset>
-                                <legend>Text size</legend>
-                                <label class="choice"><input type="radio" name="text-size" value="standard" checked> Standard 20px</label>
-                                <label class="choice"><input type="radio" name="text-size" value="large"> Large 24px</label>
-                            </fieldset>
-                            <hr class="divider">
-                            <label class="choice"><input type="checkbox" name="contrast"> High contrast</label>
-                            <p class="muted">Increase contrast for easier reading.</p>
-                        </section>
-                        <section class="card">
-                            <h2>Reminder preferences</h2>
-                            <label class="choice"><input type="checkbox" name="medicine-reminders" checked> Medicine reminders</label>
-                            <label class="choice"><input type="checkbox" name="appointment-reminders" checked> Appointment reminders</label>
-                            <label class="choice"><input type="checkbox" name="sound"> Reminder sound</label>
-                        </section>
-                        <button class="button primary" type="button" disabled title="Static HTML and CSS layout">Save preferences</button>
-                        <p class="note">Layout only. Preferences are not applied or saved.</p>
-                    </form>
-                </div>
-            </main>
-            <footer>Demonstration content &bull; Fictional people and sample health data. Not clinical advice.</footer>
+                    <!-- div.profile-layout: places profile and contact cards beside the preference controls. -->
+                    <div class="profile-layout">
+                        <!-- Unnamed div inside div.profile-layout: groups the profile and emergency-contact cards in the left column. -->
+                        <div>
+                            <!-- section.card.profile-card: contains the Your profile section and its related information. -->
+                            <section class="card profile-card">
+                                <h2>Your profile</h2>
+                                <img class="portrait" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
+                                <h3>Eleanor Brooks</h3>
+                                <p class="muted">Fictional patient &bull; Personal account</p>
+                            </section>
+                            <!-- section.card: contains the Emergency contact section and its related information. -->
+                            <section class="card">
+                                <h2>Emergency contact</h2>
+                                <h3>Anna Brooks</h3>
+                                <p class="muted">Daughter</p>
+                                <p>(202) 555-0146</p>
+                                <hr class="divider">
+                                <p class="muted">This contact is also shown in Emergency help.</p>
+                            </section>
+                        </div>
+                        <!-- form: groups accessibility and reminder controls; selections are not applied or saved. -->
+                        <form>
+                            <!-- section.card: contains the Accessibility section and its related information. -->
+                            <section class="card">
+                                <h2>Accessibility</h2>
+                                <!-- fieldset: groups the Text size radio buttons so only one size can be selected. -->
+                                <fieldset>
+                                    <legend>Text size</legend>
+                                    <!-- label.choice: groups the Standard 20px option with its radio button or checkbox. -->
+                                    <label class="choice"><input type="radio" name="text-size" value="standard" checked> Standard 20px</label>
+                                    <!-- label.choice: groups the Large 24px option with its radio button or checkbox. -->
+                                    <label class="choice"><input type="radio" name="text-size" value="large"> Large 24px</label>
+                                </fieldset>
+                                <hr class="divider">
+                                <!-- label.choice: groups the High contrast option with its radio button or checkbox. -->
+                                <label class="choice"><input type="checkbox" name="contrast"> High contrast</label>
+                                <p class="muted">Increase contrast for easier reading.</p>
+                            </section>
+                            <!-- section.card: contains the Reminder preferences section and its related information. -->
+                            <section class="card">
+                                <h2>Reminder preferences</h2>
+                                <!-- label.choice: groups the Medicine reminders option with its radio button or checkbox. -->
+                                <label class="choice"><input type="checkbox" name="medicine-reminders" checked> Medicine reminders</label>
+                                <!-- label.choice: groups the Appointment reminders option with its radio button or checkbox. -->
+                                <label class="choice"><input type="checkbox" name="appointment-reminders" checked> Appointment reminders</label>
+                                <!-- label.choice: groups the Reminder sound option with its radio button or checkbox. -->
+                                <label class="choice"><input type="checkbox" name="sound"> Reminder sound</label>
+                            </section>
+                            <!-- button.button.primary: displays Save preferences; disabled keeps this static layout from performing the action. -->
+                            <button class="button primary" type="button" disabled title="Static HTML and CSS layout">Save preferences</button>
+                            <p class="note">Layout only. Preferences are not applied or saved.</p>
+                        </form>
+                    </div>
+                </main>
+                <!-- footer: identifies the people and health records as demonstration content. -->
+                <footer>
+                    Demonstration content &bull; Fictional people and sample health data. Not clinical advice.
+                </footer>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>

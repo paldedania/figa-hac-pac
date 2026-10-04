@@ -1,12 +1,75 @@
-/* Emergency numbers and the medicine table. */
-.emergency-layout { display: grid; grid-template-columns: 1.65fr 1fr; gap: 24px; }
-.emergency-number { display: grid; grid-template-columns: 90px 1fr; gap: 16px; margin-bottom: 24px; }
-.emergency-number .accent { font-size: 48px; }
-.emergency-layout .button { margin-top: 16px; }
-.table-container { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; }
-th, td { text-align: left; padding: 12px 8px; border-top: 1px solid #43566f; }
-td { color: #bac7d9; }
-.small-image { width: 48px; height: 48px; padding: 6px; background-color: #24384f; border-radius: 6px; margin-right: 12px; }
-@media (max-width: 1100px) { .emergency-layout { grid-template-columns: 1fr; } }
-@media (max-width: 800px) { table { min-width: 680px; } }
+/* .emergency-layout: used on Emergency help; places the emergency-number and personal-contact cards side by side. */
+.emergency-layout {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 24px;
+}
+
+/* .emergency-number: used on Emergency help; places the large emergency number beside its country description. */
+.emergency-number {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* .emergency-number .accent: used on Emergency help; makes the example emergency number prominent. */
+.emergency-number .accent {
+    font-size: 48px;
+}
+
+/* .emergency-layout .button: used on Emergency help; separates the call buttons from the information above them. */
+.emergency-layout .button {
+    margin-top: 16px;
+}
+
+/* .table-container: used on Emergency help; allows the emergency medicine table to scroll horizontally when needed. */
+.table-container {
+    overflow-x: auto;
+}
+
+/* table: used on Emergency help; fills the medicine-table container and joins adjacent cell borders. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* th, td: used on Emergency help; aligns medicine-table text left and adds cell padding and row separators. */
+th, td {
+    text-align: left;
+    padding: 12px 8px;
+    border-top: 1px solid #43566f;
+}
+
+/* td: used on Emergency help; uses a softer readable color for medicine-table records. */
+td {
+    color: #bac7d9;
+}
+
+/* .small-image: used on Emergency help; sizes and separates the medicine illustration in each table row. */
+.small-image {
+    width: 48px;
+    height: 48px;
+    padding: 6px;
+    background-color: #24384f;
+    border-radius: 6px;
+    margin-right: 12px;
+}
+
+/* @media (max-width: 1100px): applies the following layout changes on screens up to 1100px wide. */
+@media (max-width: 1100px) {
+    /* .emergency-layout: used on Emergency help; stacks the emergency-number and personal-contact cards on screens up to 1100px. */
+    .emergency-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* @media (max-width: 800px): applies the following layout changes on screens up to 800px wide. */
+@media (max-width: 800px) {
+    /* table: used on Emergency help; keeps medicine columns readable while the surrounding container scrolls on screens up to 800px. */
+    table {
+        min-width: 680px;
+    }
+
+}

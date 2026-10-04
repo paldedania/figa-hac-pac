@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add medicine | MedRemind</title>
-    <link rel="icon" href="../01-today/assets/logo.png">
-    <!-- Shared styles first, then this page's styles. -->
-    <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="site">
-        <!-- The same sidebar links appear on all seven pages. -->
-        <aside class="sidebar">
-            <a class="brand" href="../index.html"><img class="logo" src="../01-today/assets/logo.png" alt="">MedRemind</a>
-            <nav class="navigation">
+    <!-- head: sets the page title, character encoding, mobile viewport, icon and stylesheet links. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add medicine | MedRemind</title>
+        <link rel="icon" href="../01-today/assets/logo.png">
+        <!-- Loads global.css for shared styles on every page. -->
+        <link rel="stylesheet" href="../global.css">
+        <!-- Loads this page's style.css for the Add medicine layout. -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- body: contains the visible Add medicine page. -->
+    <body>
+        <!-- div.site: contains the sidebar and the main content column for this page. -->
+        <div class="site">
+            <!-- aside.sidebar: contains the brand, page navigation and account details. -->
+            <aside class="sidebar">
+                <!-- a.brand: groups the logo and MedRemind name in a link back to Today. -->
+                <a class="brand" href="../index.html"><img class="logo" src="../01-today/assets/logo.png" alt="">MedRemind</a>
+                <!-- nav.navigation: contains links to all seven pages; active marks this page and emergency-link outlines Emergency help. -->
+                <nav class="navigation">
                     <a class="" href="../index.html">Today</a>
                     <a class="" href="../02-my-medicines/index.html">My medicines</a>
                     <a class="active" href="../03-add-medicine/index.html">Add medicine</a>
@@ -22,52 +28,94 @@
                     <a class="" href="../05-health-history/index.html">Health history &amp; reports</a>
                     <a class="" href="../06-profile-accessibility/index.html">Profile &amp; accessibility</a>
                     <a class="emergency-link" href="../07-emergency-help/index.html">Emergency help</a>
-            </nav>
-            <div class="account">
-                <img class="avatar" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
-                <strong>Eleanor Brooks</strong>
-                <p class="muted">Personal account</p>
+                </nav>
+                <!-- div.account: groups Eleanor Brooks's picture, name and account description. -->
+                <div class="account">
+                    <img class="avatar" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
+                    <strong>Eleanor Brooks</strong>
+                    <p class="muted">Personal account</p>
+                </div>
+            </aside>
+            <!-- div.content: contains the top bar, main page sections and footer beside the sidebar. -->
+            <div class="content">
+                <!-- header.topbar: groups the tracker label and demonstration-account label. -->
+                <header class="topbar">
+                    <p class="muted">Personal health tracker</p>
+                    <strong>Demonstration account</strong>
+                </header>
+                <!-- main: contains the Add medicine page content after the shared top bar. -->
+                <main>
+                    <!-- div.page-heading: groups the page title and subtitle. -->
+                    <div class="page-heading">
+                        <h1>Add medicine</h1>
+                        <p class="subtitle">Enter a medicine exactly as it appears on your label.</p>
+                    </div>
+                    <!-- div.add-layout: places the medicine-entry form beside the label-checking instructions. -->
+                    <div class="add-layout">
+                        <!-- form.card: groups the medicine-entry fields; this HTML/CSS layout does not save records. -->
+                        <form class="card">
+                            <h2>Medicine details</h2>
+                            <!-- div.field: groups the Medicine name label and its input control. -->
+                            <div class="field">
+                                <label for="medicine-name">Medicine name</label>
+                                <input id="medicine-name" type="text" placeholder="Enter medicine name" required>
+                            </div>
+                            <!-- div.field-pair: groups two related form fields in one row on desktop. -->
+                            <div class="field-pair">
+                                <!-- div.field: groups the Strength label and its input control. -->
+                                <div class="field">
+                                    <label for="strength">Strength</label>
+                                    <input id="strength" type="text" placeholder="For example, 10 mg" required>
+                                </div>
+                                <!-- div.field: groups the Dose label and its input control. -->
+                                <div class="field">
+                                    <label for="dose">Dose</label>
+                                    <input id="dose" type="text" placeholder="For example, 1 tablet" required>
+                                </div>
+                            </div>
+                            <!-- div.field-pair: groups two related form fields in one row on desktop. -->
+                            <div class="field-pair">
+                                <!-- div.field: groups the Time label and its input control. -->
+                                <div class="field">
+                                    <label for="medicine-time">Time</label>
+                                    <input id="medicine-time" type="time" required>
+                                </div>
+                                <!-- div.field: groups the Start date label and its input control. -->
+                                <div class="field">
+                                    <label for="start-date">Start date</label>
+                                    <input id="start-date" type="date" required>
+                                </div>
+                            </div>
+                            <!-- div.field: groups the Instructions label and its input control. -->
+                            <div class="field">
+                                <label for="instructions">Instructions</label>
+                                <textarea id="instructions" rows="4" placeholder="Enter the instructions on your medicine label"></textarea>
+                            </div>
+                            <!-- div.form-actions: groups the Save medicine button and Cancel link. -->
+                            <div class="form-actions">
+                                <!-- button.button.primary: displays Save medicine; disabled keeps this static layout from performing the action. -->
+                                <button class="button primary" type="button" disabled title="Static HTML and CSS layout">Save medicine</button>
+                                <!-- a.button: displays the Cancel link as a button. -->
+                                <a class="button" href="../02-my-medicines/index.html">Cancel</a>
+                            </div>
+                            <p class="note">Layout only. Records are not saved.</p>
+                        </form>
+                        <!-- aside.card: contains the Before you save section and its related information. -->
+                        <aside class="card">
+                            <h2>Before you save</h2>
+                            <img class="card-image" src="../01-today/assets/bottle.png" alt="">
+                            <p>Have your medicine label nearby.</p>
+                            <p class="muted">Check the name, strength, dose and time before saving your record.</p>
+                            <hr class="divider">
+                            <p class="muted">This form records your schedule. It does not recommend medicines or doses.</p>
+                        </aside>
+                    </div>
+                </main>
+                <!-- footer: identifies the people and health records as demonstration content. -->
+                <footer>
+                    Demonstration content &bull; Fictional people and sample health data. Not clinical advice.
+                </footer>
             </div>
-        </aside>
-        <div class="content">
-            <header class="topbar">
-                <p class="muted">Personal health tracker</p>
-                <strong>Demonstration account</strong>
-            </header>
-            <main>
-                <div class="page-heading">
-                    <h1>Add medicine</h1>
-                    <p class="subtitle">Enter a medicine exactly as it appears on your label.</p>
-                </div>
-                <!-- Native HTML inputs; this static form does not save records. -->
-                <div class="add-layout">
-                    <form class="card">
-                        <h2>Medicine details</h2>
-                        <div class="field"><label for="medicine-name">Medicine name</label><input id="medicine-name" type="text" placeholder="Enter medicine name" required></div>
-                        <div class="field-pair">
-                            <div class="field"><label for="strength">Strength</label><input id="strength" type="text" placeholder="For example, 10 mg" required></div>
-                            <div class="field"><label for="dose">Dose</label><input id="dose" type="text" placeholder="For example, 1 tablet" required></div>
-                        </div>
-                        <div class="field-pair">
-                            <div class="field"><label for="medicine-time">Time</label><input id="medicine-time" type="time" required></div>
-                            <div class="field"><label for="start-date">Start date</label><input id="start-date" type="date" required></div>
-                        </div>
-                        <div class="field"><label for="instructions">Instructions</label><textarea id="instructions" rows="4" placeholder="Enter the instructions on your medicine label"></textarea></div>
-                        <div class="form-actions"><button class="button primary" type="button" disabled title="Static HTML and CSS layout">Save medicine</button><a class="button" href="../02-my-medicines/index.html">Cancel</a></div>
-                        <p class="note">Layout only. Records are not saved.</p>
-                    </form>
-                    <aside class="card">
-                        <h2>Before you save</h2>
-                        <img class="card-image" src="../01-today/assets/bottle.png" alt="">
-                        <p>Have your medicine label nearby.</p>
-                        <p class="muted">Check the name, strength, dose and time before saving your record.</p>
-                        <hr class="divider">
-                        <p class="muted">This form records your schedule. It does not recommend medicines or doses.</p>
-                    </aside>
-                </div>
-            </main>
-            <footer>Demonstration content &bull; Fictional people and sample health data. Not clinical advice.</footer>
         </div>
-    </div>
-</body>
+    </body>
 </html>

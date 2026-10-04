@@ -1,5 +1,34 @@
-/* My medicines: image, name, schedule and instructions. */
-.medicine-row { display: grid; grid-template-columns: 80px 1.4fr 1fr 1.4fr; gap: 24px; }
-.medicine-row h3 { margin-top: 8px; }
-@media (max-width: 1200px) { .medicine-row { grid-template-columns: 80px 1fr; } }
-@media (max-width: 500px) { .medicine-row { display: block; } .medicine-row div { margin-top: 16px; } }
+/* .medicine-row: used on My medicines; places the medicine image, name, schedule and instructions in columns. */
+.medicine-row {
+    display: grid;
+    grid-template-columns: 80px 1.4fr 1fr 1.4fr;
+    gap: 24px;
+}
+
+/* .medicine-row h3: used on My medicines; adds space above the medicine name within its row. */
+.medicine-row h3 {
+    margin-top: 8px;
+}
+
+/* @media (max-width: 1200px): applies the following layout changes on screens up to 1200px wide. */
+@media (max-width: 1200px) {
+    /* .medicine-row: used on My medicines; uses two columns for the medicine image and details on screens up to 1200px. */
+    .medicine-row {
+        grid-template-columns: 80px 1fr;
+    }
+
+}
+
+/* @media (max-width: 500px): applies the following layout changes on screens up to 500px wide. */
+@media (max-width: 500px) {
+    /* .medicine-row: used on My medicines; stacks the medicine image and all detail groups on screens up to 500px. */
+    .medicine-row {
+        display: block;
+    }
+
+    /* .medicine-row div: used on My medicines; adds space between stacked medicine-detail groups on screens up to 500px. */
+    .medicine-row div {
+        margin-top: 16px;
+    }
+
+}

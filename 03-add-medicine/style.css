@@ -1,4 +1,20 @@
-/* Add medicine: form and label instructions. */
-.add-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
-.add-layout aside { height: auto; }
-@media (max-width: 1100px) { .add-layout { grid-template-columns: 1fr; } }
+/* .add-layout: used on Add medicine; places the medicine form beside its label-checking instructions. */
+.add-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+/* .add-layout aside: used on Add medicine; lets the label-checking card keep an automatic height. */
+.add-layout aside {
+    height: auto;
+}
+
+/* @media (max-width: 1100px): applies the following layout changes on screens up to 1100px wide. */
+@media (max-width: 1100px) {
+    /* .add-layout: used on Add medicine; stacks the medicine form and instruction card on screens up to 1100px. */
+    .add-layout {
+        grid-template-columns: 1fr;
+    }
+
+}

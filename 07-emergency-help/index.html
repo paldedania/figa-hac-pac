@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency help | MedRemind</title>
-    <link rel="icon" href="../01-today/assets/logo.png">
-    <!-- Shared styles first, then this page's styles. -->
-    <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="site">
-        <!-- The same sidebar links appear on all seven pages. -->
-        <aside class="sidebar">
-            <a class="brand" href="../index.html"><img class="logo" src="../01-today/assets/logo.png" alt="">MedRemind</a>
-            <nav class="navigation">
+    <!-- head: sets the page title, character encoding, mobile viewport, icon and stylesheet links. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emergency help | MedRemind</title>
+        <link rel="icon" href="../01-today/assets/logo.png">
+        <!-- Loads global.css for shared styles on every page. -->
+        <link rel="stylesheet" href="../global.css">
+        <!-- Loads this page's style.css for the Emergency help layout. -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- body: contains the visible Emergency help page. -->
+    <body>
+        <!-- div.site: contains the sidebar and the main content column for this page. -->
+        <div class="site">
+            <!-- aside.sidebar: contains the brand, page navigation and account details. -->
+            <aside class="sidebar">
+                <!-- a.brand: groups the logo and MedRemind name in a link back to Today. -->
+                <a class="brand" href="../index.html"><img class="logo" src="../01-today/assets/logo.png" alt="">MedRemind</a>
+                <!-- nav.navigation: contains links to all seven pages; active marks this page and emergency-link outlines Emergency help. -->
+                <nav class="navigation">
                     <a class="" href="../index.html">Today</a>
                     <a class="" href="../02-my-medicines/index.html">My medicines</a>
                     <a class="" href="../03-add-medicine/index.html">Add medicine</a>
@@ -22,60 +28,116 @@
                     <a class="" href="../05-health-history/index.html">Health history &amp; reports</a>
                     <a class="" href="../06-profile-accessibility/index.html">Profile &amp; accessibility</a>
                     <a class="active emergency-link" href="../07-emergency-help/index.html">Emergency help</a>
-            </nav>
-            <div class="account">
-                <img class="avatar" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
-                <strong>Eleanor Brooks</strong>
-                <p class="muted">Personal account</p>
-            </div>
-        </aside>
-        <div class="content">
-            <header class="topbar">
-                <p class="muted">Personal health tracker</p>
-                <strong>Demonstration account</strong>
-            </header>
-            <main>
-                <div class="page-heading">
-                    <h1>Emergency help</h1>
-                    <p class="subtitle">Important numbers and your medicine list in one place.</p>
+                </nav>
+                <!-- div.account: groups Eleanor Brooks's picture, name and account description. -->
+                <div class="account">
+                    <img class="avatar" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
+                    <strong>Eleanor Brooks</strong>
+                    <p class="muted">Personal account</p>
                 </div>
-                <div class="emergency-layout">
-                    <section class="card">
-                        <h2>Call for emergency help</h2>
-                        <h3>If you may be having a medical emergency, call your local emergency number now.</h3>
-                        <hr class="divider">
-                        <div class="emergency-number"><strong class="accent">911</strong><div><strong>United States example</strong><p class="muted">Emergency number</p></div></div>
-                        <button class="button primary full" type="button" disabled title="Static HTML and CSS layout">Call 911</button>
-                        <p class="muted">Outside the United States, use your local emergency number.</p>
-                    </section>
-                    <section class="card">
-                        <h2>Emergency contact</h2>
-                        <h3>Anna Brooks</h3>
-                        <p class="muted">Daughter of Eleanor Brooks</p>
-                        <p><strong>(202) 555-0146</strong></p>
-                        <button class="button full" type="button" disabled title="Static HTML and CSS layout">Call Anna Brooks</button>
-                        <hr class="divider">
-                        <p class="muted">Contacting Anna is not a substitute for emergency care.</p>
-                    </section>
-                </div>
-                <!-- The download is a normal HTML link to a text file. -->
-                <section class="card">
-                    <div class="section-heading"><div><h2>Current medicines</h2><p class="muted">Eleanor Brooks &bull; Share with emergency responders</p></div><a class="button" href="medicine-list.txt" download>Download medicine list</a></div>
-                    <div class="table-container">
-                        <table>
-                            <thead><tr><th>Medicine</th><th>Dose and time</th><th>Instructions</th></tr></thead>
-                            <tbody>
-                            <tr><td><img class="small-image" src="../01-today/assets/bottle.png" alt=""> Lisinopril 10 mg</td><td>1 tablet daily &bull; 8:00 AM</td><td>Daily</td></tr>
-                            <tr><td><img class="small-image" src="../01-today/assets/blister.png" alt=""> Metformin 500 mg</td><td>1 tablet daily &bull; 1:00 PM</td><td>With food</td></tr>
-                            <tr><td><img class="small-image" src="../01-today/assets/capsule.png" alt=""> Atorvastatin 20 mg</td><td>1 tablet daily &bull; 8:00 PM</td><td>Daily</td></tr>
-                            </tbody>
-                        </table>
+            </aside>
+            <!-- div.content: contains the top bar, main page sections and footer beside the sidebar. -->
+            <div class="content">
+                <!-- header.topbar: groups the tracker label and demonstration-account label. -->
+                <header class="topbar">
+                    <p class="muted">Personal health tracker</p>
+                    <strong>Demonstration account</strong>
+                </header>
+                <!-- main: contains the Emergency help page content after the shared top bar. -->
+                <main>
+                    <!-- div.page-heading: groups the page title and subtitle. -->
+                    <div class="page-heading">
+                        <h1>Emergency help</h1>
+                        <p class="subtitle">Important numbers and your medicine list in one place.</p>
                     </div>
-                </section>
-                <p><strong>This app is not a substitute for emergency care.</strong></p>
-            </main>
-            <footer>Demonstration content &bull; Fictional people and sample health data. Not clinical advice.</footer>
+                    <!-- div.emergency-layout: places the emergency-number card beside the personal-contact card. -->
+                    <div class="emergency-layout">
+                        <!-- section.card: contains the Call for emergency help section and its related information. -->
+                        <section class="card">
+                            <h2>Call for emergency help</h2>
+                            <h3>If you may be having a medical emergency, call your local emergency number now.</h3>
+                            <hr class="divider">
+                            <!-- div.emergency-number: groups the example emergency number with its country and description. -->
+                            <div class="emergency-number">
+                                <strong class="accent">911</strong>
+                                <!-- Unnamed div inside div.emergency-number: groups the country label and emergency-number description. -->
+                                <div>
+                                    <strong>United States example</strong>
+                                    <p class="muted">Emergency number</p>
+                                </div>
+                            </div>
+                            <!-- button.button.primary.full: displays Call 911; disabled keeps this static layout from performing the action. -->
+                            <button class="button primary full" type="button" disabled title="Static HTML and CSS layout">Call 911</button>
+                            <p class="muted">Outside the United States, use your local emergency number.</p>
+                        </section>
+                        <!-- section.card: contains the Emergency contact section and its related information. -->
+                        <section class="card">
+                            <h2>Emergency contact</h2>
+                            <h3>Anna Brooks</h3>
+                            <p class="muted">Daughter of Eleanor Brooks</p>
+                            <p><strong>(202) 555-0146</strong></p>
+                            <!-- button.button.full: displays Call Anna Brooks; disabled keeps this static layout from performing the action. -->
+                            <button class="button full" type="button" disabled title="Static HTML and CSS layout">Call Anna Brooks</button>
+                            <hr class="divider">
+                            <p class="muted">Contacting Anna is not a substitute for emergency care.</p>
+                        </section>
+                    </div>
+                    <!-- section.card: contains the Current medicines section and its related information. -->
+                    <section class="card">
+                        <!-- div.section-heading: groups a section title with its count or action link. -->
+                        <div class="section-heading">
+                            <!-- Unnamed div inside div.section-heading: groups the Current medicines heading and medicine-list owner. -->
+                            <div>
+                                <h2>Current medicines</h2>
+                                <p class="muted">Eleanor Brooks &bull; Share with emergency responders</p>
+                            </div>
+                            <!-- a.button: displays the Download medicine list link as a button. -->
+                            <a class="button" href="medicine-list.txt" download>Download medicine list</a>
+                        </div>
+                        <!-- div.table-container: wraps the medicine table so wide rows can scroll on smaller screens. -->
+                        <div class="table-container">
+                            <!-- table: lists each current medicine with its dose, time and instructions. -->
+                            <table>
+                                <!-- thead: groups the medicine-table column headings. -->
+                                <thead>
+                                    <!-- tr: contains the three column headings. -->
+                                    <tr>
+                                        <th>Medicine</th>
+                                        <th>Dose and time</th>
+                                        <th>Instructions</th>
+                                    </tr>
+                                </thead>
+                                <!-- tbody: groups the three sample medicine rows. -->
+                                <tbody>
+                                    <!-- tr: contains the Lisinopril 10 medicine record. -->
+                                    <tr>
+                                        <td><img class="small-image" src="../01-today/assets/bottle.png" alt=""> Lisinopril 10 mg</td>
+                                        <td>1 tablet daily &bull; 8:00 AM</td>
+                                        <td>Daily</td>
+                                    </tr>
+                                    <!-- tr: contains the Metformin 500 medicine record. -->
+                                    <tr>
+                                        <td><img class="small-image" src="../01-today/assets/blister.png" alt=""> Metformin 500 mg</td>
+                                        <td>1 tablet daily &bull; 1:00 PM</td>
+                                        <td>With food</td>
+                                    </tr>
+                                    <!-- tr: contains the Atorvastatin 20 medicine record. -->
+                                    <tr>
+                                        <td><img class="small-image" src="../01-today/assets/capsule.png" alt=""> Atorvastatin 20 mg</td>
+                                        <td>1 tablet daily &bull; 8:00 PM</td>
+                                        <td>Daily</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <p><strong>This app is not a substitute for emergency care.</strong></p>
+                </main>
+                <!-- footer: identifies the people and health records as demonstration content. -->
+                <footer>
+                    Demonstration content &bull; Fictional people and sample health data. Not clinical advice.
+                </footer>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>

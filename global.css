@@ -1,5 +1,9 @@
-/* Shared colors, text, navigation and cards. */
-* { box-sizing: border-box; }
+/* *: used on all seven pages; includes padding and borders in element widths, keeping shared layouts within their columns. */
+* {
+    box-sizing: border-box;
+}
+
+/* body: used on all seven pages; sets the dark background, readable text, font and base spacing for every page. */
 body {
     margin: 0;
     background-color: #0b1426;
@@ -8,28 +12,78 @@ body {
     font-size: 20px;
     line-height: 1.5;
 }
-h1, h2, h3, p { margin: 0; }
-h1 { font-size: 32px; }
-h2, h3 { font-size: 24px; }
-a { color: #f0f4fc; text-decoration: none; }
-img { vertical-align: middle; }
-.muted, .subtitle, footer { color: #bac7d9; }
-.accent { color: #59d4bf; }
+
+/* h1, h2, h3, p: used on all seven pages; removes default heading and paragraph margins so the layout controls spacing. */
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* h1: used on all seven pages; sets the main page-title size. */
+h1 {
+    font-size: 32px;
+}
+
+/* h2, h3: used on all seven pages; sets the section and card heading size. */
+h2, h3 {
+    font-size: 24px;
+}
+
+/* a: used on all seven pages; sets readable link text and removes the default underline. */
+a {
+    color: #f0f4fc;
+    text-decoration: none;
+}
+
+/* img: used on all seven pages; aligns images with nearby text. */
+img {
+    vertical-align: middle;
+}
+
+/* .muted, .subtitle, footer: used on all seven pages; gives supporting text, page subtitles and footers a softer readable color. */
+.muted, .subtitle, footer {
+    color: #bac7d9;
+}
+
+/* .accent: used on Health history & reports, Emergency help and Today; highlights status text, readings and important numbers in mint. */
+.accent {
+    color: #59d4bf;
+}
+
+/* .site: used on all seven pages; centers the full page and creates the sidebar and content columns. */
 .site {
     display: grid;
     grid-template-columns: 320px 1fr;
     max-width: 1440px;
     margin: 0 auto;
 }
+
+/* .sidebar: used on all seven pages; stacks the brand, navigation and account area with padding and a right border. */
 .sidebar {
     display: flex;
     flex-direction: column;
     padding: 32px 24px;
     border-right: 1px solid #2b3c53;
 }
-.brand { font-size: 24px; font-weight: bold; }
-.brand img { width: 40px; height: 40px; margin-right: 12px; }
-.navigation { margin-top: 48px; }
+
+/* .brand: used on all seven pages; makes the sidebar MedRemind name larger and bold. */
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* .brand img: used on all seven pages; sizes the sidebar logo and separates it from the brand name. */
+.brand img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+/* .navigation: used on all seven pages; separates the sidebar page links from the brand. */
+.navigation {
+    margin-top: 48px;
+}
+
+/* .navigation a: used on all seven pages; gives each sidebar link its own padded, rounded row. */
 .navigation a {
     display: block;
     padding: 16px;
@@ -37,24 +91,118 @@ img { vertical-align: middle; }
     border: 1px solid transparent;
     border-radius: 6px;
 }
-.navigation a:hover { background-color: #19283d; }
-.navigation .active { background-color: #59d4bf; color: #071c2a; font-weight: bold; }
-.navigation .emergency-link { border-color: #ff9298; }
-.account { margin-top: auto; padding-top: 80px; }
-.account img { width: 48px; height: 48px; float: left; margin-right: 16px; }
-.account p { font-size: 18px; }
-.content { min-width: 0; padding: 28px 48px; }
-.topbar { display: flex; justify-content: space-between; border-bottom: 1px solid #43566f; padding-bottom: 28px; }
-.topbar strong { color: #59d4bf; }
-main { padding-top: 36px; }
-.page-heading { margin-bottom: 32px; }
-.subtitle { margin-top: 8px; }
-.section-heading { display: flex; justify-content: space-between; margin-bottom: 24px; }
-.card { background-color: #19283d; padding: 24px; border-radius: 16px; margin-bottom: 24px; }
-.card h2 { margin-bottom: 20px; }
-.card p { margin-top: 8px; }
-.card-image { width: 80px; height: 80px; padding: 8px; background-color: #24384f; border-radius: 12px; }
-.portrait { width: 96px; height: 96px; }
+
+/* .navigation a:hover: used on all seven pages; highlights a sidebar link when the pointer is over it. */
+.navigation a:hover {
+    background-color: #19283d;
+}
+
+/* .navigation .active: used on all seven pages; highlights the link for the current page. */
+.navigation .active {
+    background-color: #59d4bf;
+    color: #071c2a;
+    font-weight: bold;
+}
+
+/* .navigation .emergency-link: used on all seven pages; outlines the Emergency help link in red. */
+.navigation .emergency-link {
+    border-color: #ff9298;
+}
+
+/* .account: used on all seven pages; places the sidebar account details below the navigation. */
+.account {
+    margin-top: auto;
+    padding-top: 80px;
+}
+
+/* .account img: used on all seven pages; sizes the account picture and places the name and description beside it. */
+.account img {
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-right: 16px;
+}
+
+/* .account p: used on all seven pages; makes the sidebar account description smaller. */
+.account p {
+    font-size: 18px;
+}
+
+/* .content: used on all seven pages; pads the content column and lets it fit inside the page grid. */
+.content {
+    min-width: 0;
+    padding: 28px 48px;
+}
+
+/* .topbar: used on all seven pages; separates the tracker and account labels across a bordered row. */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #43566f;
+    padding-bottom: 28px;
+}
+
+/* .topbar strong: used on all seven pages; highlights the demonstration-account label. */
+.topbar strong {
+    color: #59d4bf;
+}
+
+/* main: used on all seven pages; separates the main page content from the top bar. */
+main {
+    padding-top: 36px;
+}
+
+/* .page-heading: used on all seven pages; adds space below the page title and subtitle group. */
+.page-heading {
+    margin-bottom: 32px;
+}
+
+/* .subtitle: used on all seven pages; adds space between a page title and its description. */
+.subtitle {
+    margin-top: 8px;
+}
+
+/* .section-heading: used on My medicines, Appointments, Health history & reports, Emergency help and Today; places section titles beside their counts or action links. */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+/* .card: used on all seven pages; gives information panels a dark surface, padding, rounded corners and separation. */
+.card {
+    background-color: #19283d;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+/* .card h2: used on Add medicine, Appointments, Profile & accessibility, Emergency help and Today; separates a card heading from the content below it. */
+.card h2 {
+    margin-bottom: 20px;
+}
+
+/* .card p: used on all seven pages; adds space above paragraphs inside information cards. */
+.card p {
+    margin-top: 8px;
+}
+
+/* .card-image: used on My medicines, Add medicine, Health history & reports and Today; sizes medicine and report illustrations on a raised dark background. */
+.card-image {
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    background-color: #24384f;
+    border-radius: 12px;
+}
+
+/* .portrait: used on Appointments, Profile & accessibility and Today; sizes the doctor and profile portraits. */
+.portrait {
+    width: 96px;
+    height: 96px;
+}
+
+/* .button: used on all seven pages; gives action links, buttons and report summaries a shared padded button style. */
 .button {
     display: inline-block;
     border: 1px solid #43566f;
@@ -67,17 +215,62 @@ main { padding-top: 36px; }
     padding: 12px 20px;
     text-align: center;
 }
-.primary { background-color: #59d4bf; border-color: #59d4bf; color: #071c2a; }
-.button:hover { border-color: #59d4bf; }
-a:focus, button:focus, input:focus, textarea:focus, select:focus, summary:focus { outline: 3px solid #59d4bf; }
-.full { width: 100%; }
-.divider { border: 0; border-top: 1px solid #43566f; margin: 20px 0; }
-.note { color: #bac7d9; margin-top: 24px; }
-footer { margin-top: 120px; padding-bottom: 24px; font-size: 18px; }
 
-/* Common form fields. */
-.field { margin-bottom: 20px; }
-.field label { display: block; font-weight: bold; margin-bottom: 8px; }
+/* .primary: used on My medicines, Add medicine, Profile & accessibility, Emergency help and Today; highlights the main action with a mint background and dark text. */
+.primary {
+    background-color: #59d4bf;
+    border-color: #59d4bf;
+    color: #071c2a;
+}
+
+/* .button:hover: used on all seven pages; highlights the border of a button-style control under the pointer. */
+.button:hover {
+    border-color: #59d4bf;
+}
+
+/* a:focus, button:focus, input:focus, textarea:focus, select:focus, summary:focus: used on all seven pages; adds a visible mint outline to the control selected with the keyboard. */
+a:focus, button:focus, input:focus, textarea:focus, select:focus, summary:focus {
+    outline: 3px solid #59d4bf;
+}
+
+/* .full: used on Emergency help and Today; makes a button-style control fill its container width. */
+.full {
+    width: 100%;
+}
+
+/* .divider: used on My medicines, Add medicine, Appointments, Profile & accessibility, Emergency help and Today; draws a horizontal separator inside information cards. */
+.divider {
+    border: 0;
+    border-top: 1px solid #43566f;
+    margin: 20px 0;
+}
+
+/* .note: used on Add medicine, Health history & reports, Profile & accessibility and Today; styles supporting instructions beneath cards and forms. */
+.note {
+    color: #bac7d9;
+    margin-top: 24px;
+}
+
+/* footer: used on all seven pages; separates and sizes the demonstration-content notice below the page. */
+footer {
+    margin-top: 120px;
+    padding-bottom: 24px;
+    font-size: 18px;
+}
+
+/* .field: used on Add medicine; separates each medicine-entry label and control group. */
+.field {
+    margin-bottom: 20px;
+}
+
+/* .field label: used on Add medicine; puts each medicine-entry label above its control in bold text. */
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* .field input, .field textarea, .field select: used on Add medicine; gives form controls full width, padding, dark backgrounds and readable text. */
 .field input, .field textarea, .field select {
     width: 100%;
     padding: 14px;
@@ -88,35 +281,145 @@ footer { margin-top: 120px; padding-bottom: 24px; font-size: 18px; }
     font-family: Arial, sans-serif;
     font-size: 20px;
 }
-.field textarea { height: 120px; }
-.field-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.form-actions { border-top: 1px solid #43566f; padding-top: 24px; }
-.form-actions .button { margin-right: 8px; }
 
-/* Smaller screens use one column. */
+/* .field textarea: used on Add medicine; provides extra height for the medicine instructions. */
+.field textarea {
+    height: 120px;
+}
+
+/* .field-pair: used on Add medicine; places related medicine-entry fields in two equally sized columns. */
+.field-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* .form-actions: used on Add medicine; separates the medicine form actions from the input fields with a top border. */
+.form-actions {
+    border-top: 1px solid #43566f;
+    padding-top: 24px;
+}
+
+/* .form-actions .button: used on Add medicine; adds space between Save medicine and Cancel. */
+.form-actions .button {
+    margin-right: 8px;
+}
+
+/* @media (max-width: 1100px): applies the following layout changes on screens up to 1100px wide. */
 @media (max-width: 1100px) {
-    .site { grid-template-columns: 260px 1fr; }
-    .content { padding: 24px; }
-    .topbar { display: block; }
+    /* .site: used on all seven pages; narrows the shared sidebar column to leave more room for content on screens up to 1100px. */
+    .site {
+        grid-template-columns: 260px 1fr;
+    }
+
+    /* .content: used on all seven pages; reduces the padding around the page content on screens up to 1100px. */
+    .content {
+        padding: 24px;
+    }
+
+    /* .topbar: used on all seven pages; stacks the tracker and account labels on screens up to 1100px. */
+    .topbar {
+        display: block;
+    }
+
 }
+
+/* @media (max-width: 800px): applies the following layout changes on screens up to 800px wide. */
 @media (max-width: 800px) {
-    .site { display: block; }
-    .sidebar { padding: 24px; border-right: 0; border-bottom: 1px solid #2b3c53; }
-    .navigation { margin-top: 24px; }
-    .navigation a { padding: 12px; }
-    .account { display: none; }
-    .content { padding: 24px 16px; }
-    h1 { font-size: 28px; }
-    .section-heading { display: block; }
-    .field-pair { grid-template-columns: 1fr; gap: 0; }
-    footer { margin-top: 64px; }
+    /* .site: used on all seven pages; stacks the shared page areas in one column on screens up to 800px. */
+    .site {
+        display: block;
+    }
+
+    /* .sidebar: used on all seven pages; moves the sidebar border below the navigation and reduces its padding on screens up to 800px. */
+    .sidebar {
+        padding: 24px;
+        border-right: 0;
+        border-bottom: 1px solid #2b3c53;
+    }
+
+    /* .navigation: used on all seven pages; reduces the gap above the page links on screens up to 800px. */
+    .navigation {
+        margin-top: 24px;
+    }
+
+    /* .navigation a: used on all seven pages; reduces padding inside the page links on screens up to 800px. */
+    .navigation a {
+        padding: 12px;
+    }
+
+    /* .account: used on all seven pages; hides the sidebar account block to save screen space on screens up to 800px. */
+    .account {
+        display: none;
+    }
+
+    /* .content: used on all seven pages; reduces the padding around the page content on screens up to 800px. */
+    .content {
+        padding: 24px 16px;
+    }
+
+    /* h1: used on all seven pages; reduces the page-title size on screens up to 800px. */
+    h1 {
+        font-size: 28px;
+    }
+
+    /* .section-heading: used on My medicines, Appointments, Health history & reports, Emergency help and Today; stacks section titles and their counts or action links on screens up to 800px. */
+    .section-heading {
+        display: block;
+    }
+
+    /* .field-pair: used on Add medicine; stacks paired medicine-entry fields in one column on screens up to 800px. */
+    .field-pair {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* footer: used on all seven pages; reduces the gap above the footer notice on screens up to 800px. */
+    footer {
+        margin-top: 64px;
+    }
+
 }
+
+/* Print: switches every page to a light, readable paper layout. */
 @media print {
-    body { background-color: white; color: black; }
-    .site { display: block; }
-    .sidebar, .topbar, .button { display: none; }
-    .card { background-color: white; border: 1px solid #777; }
-    .field input, .field select, .field textarea, .choice { background-color: white; color: black; border-color: #777; }
-    .muted, .subtitle, .note, footer { color: #333; }
-    .accent { color: #146754; }
+    /* body: used on all seven pages; prints every page with a white background and black text. */
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    /* .site: used on all seven pages; prints the page content in a single column. */
+    .site {
+        display: block;
+    }
+
+    /* .sidebar, .topbar, .button: used on all seven pages; hides navigation, the top bar and action controls on printed pages. */
+    .sidebar, .topbar, .button {
+        display: none;
+    }
+
+    /* .card: used on all seven pages; prints information cards with white backgrounds and visible borders. */
+    .card {
+        background-color: white;
+        border: 1px solid #777;
+    }
+
+    /* .field input, .field select, .field textarea, .choice: used on Add medicine and Profile & accessibility; prints form fields and preference rows with light backgrounds and dark text. */
+    .field input, .field select, .field textarea, .choice {
+        background-color: white;
+        color: black;
+        border-color: #777;
+    }
+
+    /* .muted, .subtitle, .note, footer: used on all seven pages; keeps supporting text readable on white printed pages. */
+    .muted, .subtitle, .note, footer {
+        color: #333;
+    }
+
+    /* .accent: used on Health history & reports, Emergency help and Today; uses a darker green that stays readable on white paper. */
+    .accent {
+        color: #146754;
+    }
+
 }

@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Today | MedRemind</title>
-    <link rel="icon" href="01-today/assets/logo.png">
-    <!-- Shared styles first, then this page's styles. -->
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="01-today/style.css">
-</head>
-<body>
-    <div class="site">
-        <!-- The same sidebar links appear on all seven pages. -->
-        <aside class="sidebar">
-            <a class="brand" href="index.html"><img class="logo" src="01-today/assets/logo.png" alt="">MedRemind</a>
-            <nav class="navigation">
+    <!-- head: sets the page title, character encoding, mobile viewport, icon and stylesheet links. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Today | MedRemind</title>
+        <link rel="icon" href="01-today/assets/logo.png">
+        <!-- Loads global.css for shared styles on every page. -->
+        <link rel="stylesheet" href="global.css">
+        <!-- Loads this page's style.css for the Today layout. -->
+        <link rel="stylesheet" href="01-today/style.css">
+    </head>
+    <!-- body: contains the visible Today page. -->
+    <body>
+        <!-- div.site: contains the sidebar and the main content column for this page. -->
+        <div class="site">
+            <!-- aside.sidebar: contains the brand, page navigation and account details. -->
+            <aside class="sidebar">
+                <!-- a.brand: groups the logo and MedRemind name in a link back to Today. -->
+                <a class="brand" href="index.html"><img class="logo" src="01-today/assets/logo.png" alt="">MedRemind</a>
+                <!-- nav.navigation: contains links to all seven pages; active marks this page and emergency-link outlines Emergency help. -->
+                <nav class="navigation">
                     <a class="active" href="index.html">Today</a>
                     <a class="" href="02-my-medicines/index.html">My medicines</a>
                     <a class="" href="03-add-medicine/index.html">Add medicine</a>
@@ -22,74 +28,136 @@
                     <a class="" href="05-health-history/index.html">Health history &amp; reports</a>
                     <a class="" href="06-profile-accessibility/index.html">Profile &amp; accessibility</a>
                     <a class="emergency-link" href="07-emergency-help/index.html">Emergency help</a>
-            </nav>
-            <div class="account">
-                <img class="avatar" src="01-today/assets/eleanor.png" alt="Eleanor Brooks">
-                <strong>Eleanor Brooks</strong>
-                <p class="muted">Personal account</p>
+                </nav>
+                <!-- div.account: groups Eleanor Brooks's picture, name and account description. -->
+                <div class="account">
+                    <img class="avatar" src="01-today/assets/eleanor.png" alt="Eleanor Brooks">
+                    <strong>Eleanor Brooks</strong>
+                    <p class="muted">Personal account</p>
+                </div>
+            </aside>
+            <!-- div.content: contains the top bar, main page sections and footer beside the sidebar. -->
+            <div class="content">
+                <!-- header.topbar: groups the tracker label and demonstration-account label. -->
+                <header class="topbar">
+                    <p class="muted">Personal health tracker</p>
+                    <strong>Demonstration account</strong>
+                </header>
+                <!-- main: contains the Today page content after the shared top bar. -->
+                <main>
+                    <!-- div.page-heading: groups the page title and subtitle. -->
+                    <div class="page-heading">
+                        <h1>Today</h1>
+                        <p class="subtitle">Monday 12 October 2026</p>
+                    </div>
+                    <!-- div.today-layout: places today's medicine list beside the progress and appointment cards. -->
+                    <div class="today-layout">
+                        <!-- section: contains the Your medicines today section and its related information. -->
+                        <section>
+                            <!-- div.section-heading: groups a section title with its count or action link. -->
+                            <div class="section-heading">
+                                <h2>Your medicines today</h2>
+                                <span class="muted">3 scheduled</span>
+                            </div>
+                            <!-- article.card.dose-card: contains the Lisinopril 10 mg section and its related information. -->
+                            <article class="card dose-card">
+                                <!-- div.dose-top: groups the medicine image, name, dose and scheduled time. -->
+                                <div class="dose-top">
+                                    <img class="card-image" src="01-today/assets/bottle.png" alt="">
+                                    <!-- Unnamed div inside div.dose-top: groups the Lisinopril 10 mg name and dose description. -->
+                                    <div>
+                                        <h3>Lisinopril 10 mg</h3>
+                                        <p class="muted">1 tablet daily</p>
+                                    </div>
+                                    <strong class="dose-time">8:00 AM</strong>
+                                </div>
+                                <!-- div.dose-bottom: groups the dose status with its recorded time or Mark as taken button. -->
+                                <div class="dose-bottom">
+                                    <strong class="accent">Taken</strong>
+                                    <span class="muted">Marked at 8:00 AM</span>
+                                </div>
+                            </article>
+                            <!-- article.card.dose-card: contains the Metformin 500 mg section and its related information. -->
+                            <article class="card dose-card">
+                                <!-- div.dose-top: groups the medicine image, name, dose and scheduled time. -->
+                                <div class="dose-top">
+                                    <img class="card-image" src="01-today/assets/blister.png" alt="">
+                                    <!-- Unnamed div inside div.dose-top: groups the Metformin 500 mg name and dose description. -->
+                                    <div>
+                                        <h3>Metformin 500 mg</h3>
+                                        <p class="muted">1 tablet daily &bull; With food</p>
+                                    </div>
+                                    <strong class="dose-time">1:00 PM</strong>
+                                </div>
+                                <!-- div.dose-bottom: groups the dose status with its recorded time or Mark as taken button. -->
+                                <div class="dose-bottom">
+                                    <strong class="accent">Upcoming</strong>
+                                    <!-- button.button.primary: displays Mark as taken; disabled keeps this static layout from performing the action. -->
+                                    <button class="button primary" type="button" disabled title="Static HTML and CSS layout">Mark as taken</button>
+                                </div>
+                            </article>
+                            <!-- article.card.dose-card: contains the Atorvastatin 20 mg section and its related information. -->
+                            <article class="card dose-card">
+                                <!-- div.dose-top: groups the medicine image, name, dose and scheduled time. -->
+                                <div class="dose-top">
+                                    <img class="card-image" src="01-today/assets/capsule.png" alt="">
+                                    <!-- Unnamed div inside div.dose-top: groups the Atorvastatin 20 mg name and dose description. -->
+                                    <div>
+                                        <h3>Atorvastatin 20 mg</h3>
+                                        <p class="muted">1 tablet daily</p>
+                                    </div>
+                                    <strong class="dose-time">8:00 PM</strong>
+                                </div>
+                                <!-- div.dose-bottom: groups the dose status with its recorded time or Mark as taken button. -->
+                                <div class="dose-bottom">
+                                    <strong class="accent">Scheduled</strong>
+                                    <!-- button.button: displays Mark as taken; disabled keeps this static layout from performing the action. -->
+                                    <button class="button" type="button" disabled title="Static HTML and CSS layout">Mark as taken</button>
+                                </div>
+                            </article>
+                            <p class="note">Mark a medicine as taken only after you have taken it.</p>
+                        </section>
+                        <!-- aside: groups the Daily progress and Next appointment cards in the summary column. -->
+                        <aside>
+                            <!-- section.card: contains the Daily progress section and its related information. -->
+                            <section class="card">
+                                <h2>Daily progress</h2>
+                                <p class="progress-number accent">1 of 3</p>
+                                <p class="muted">Medicines marked taken</p>
+                                <!-- div.progress-bars: groups three progress segments, one for each scheduled medicine. -->
+                                <div class="progress-bars">
+                                    <span class="complete"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p class="muted">2 medicines remaining today.</p>
+                            </section>
+                            <!-- section.card: contains the Next appointment section and its related information. -->
+                            <section class="card">
+                                <h2>Next appointment</h2>
+                                <!-- div.doctor-row: groups the doctor's portrait, name and appointment type. -->
+                                <div class="doctor-row">
+                                    <img class="portrait" src="01-today/assets/doctor-maya.png" alt="">
+                                    <!-- Unnamed div inside div.doctor-row: groups the doctor name and appointment type. -->
+                                    <div>
+                                        <strong>Dr Maya Patel</strong>
+                                        <p class="muted">Routine check-up</p>
+                                    </div>
+                                </div>
+                                <hr class="divider">
+                                <p>15 October 2026</p>
+                                <p>10:30 AM</p>
+                                <!-- a.button.full: displays the View appointments link as a button. -->
+                                <a class="button full" href="04-appointments/index.html">View appointments</a>
+                            </section>
+                        </aside>
+                    </div>
+                </main>
+                <!-- footer: identifies the people and health records as demonstration content. -->
+                <footer>
+                    Demonstration content &bull; Fictional people and sample health data. Not clinical advice.
+                </footer>
             </div>
-        </aside>
-        <div class="content">
-            <header class="topbar">
-                <p class="muted">Personal health tracker</p>
-                <strong>Demonstration account</strong>
-            </header>
-            <main>
-                <div class="page-heading">
-                    <h1>Today</h1>
-                    <p class="subtitle">Monday 12 October 2026</p>
-                </div>
-                <!-- Medicine cards and the daily summary. -->
-                <div class="today-layout">
-                    <section>
-                        <div class="section-heading"><h2>Your medicines today</h2><span class="muted">3 scheduled</span></div>
-                        <article class="card dose-card">
-                            <div class="dose-top">
-                                <img class="card-image" src="01-today/assets/bottle.png" alt="">
-                                <div><h3>Lisinopril 10 mg</h3><p class="muted">1 tablet daily</p></div>
-                                <strong class="dose-time">8:00 AM</strong>
-                            </div>
-                            <div class="dose-bottom"><strong class="accent">Taken</strong><span class="muted">Marked at 8:00 AM</span></div>
-                        </article>
-                        <article class="card dose-card">
-                            <div class="dose-top">
-                                <img class="card-image" src="01-today/assets/blister.png" alt="">
-                                <div><h3>Metformin 500 mg</h3><p class="muted">1 tablet daily &bull; With food</p></div>
-                                <strong class="dose-time">1:00 PM</strong>
-                            </div>
-                            <div class="dose-bottom"><strong class="accent">Upcoming</strong><button class="button primary" type="button" disabled title="Static HTML and CSS layout">Mark as taken</button></div>
-                        </article>
-                        <article class="card dose-card">
-                            <div class="dose-top">
-                                <img class="card-image" src="01-today/assets/capsule.png" alt="">
-                                <div><h3>Atorvastatin 20 mg</h3><p class="muted">1 tablet daily</p></div>
-                                <strong class="dose-time">8:00 PM</strong>
-                            </div>
-                            <div class="dose-bottom"><strong class="accent">Scheduled</strong><button class="button" type="button" disabled title="Static HTML and CSS layout">Mark as taken</button></div>
-                        </article>
-                        <p class="note">Mark a medicine as taken only after you have taken it.</p>
-                    </section>
-                    <aside>
-                        <section class="card">
-                            <h2>Daily progress</h2>
-                            <p class="progress-number accent">1 of 3</p>
-                            <p class="muted">Medicines marked taken</p>
-                            <div class="progress-bars"><span class="complete"></span><span></span><span></span></div>
-                            <p class="muted">2 medicines remaining today.</p>
-                        </section>
-                        <section class="card">
-                            <h2>Next appointment</h2>
-                            <div class="doctor-row"><img class="portrait" src="01-today/assets/doctor-maya.png" alt=""><div><strong>Dr Maya Patel</strong><p class="muted">Routine check-up</p></div></div>
-                            <hr class="divider">
-                            <p>15 October 2026</p>
-                            <p>10:30 AM</p>
-                            <a class="button full" href="04-appointments/index.html">View appointments</a>
-                        </section>
-                    </aside>
-                </div>
-            </main>
-            <footer>Demonstration content &bull; Fictional people and sample health data. Not clinical advice.</footer>
         </div>
-    </div>
-</body>
+    </body>
 </html>

@@ -1,5 +1,26 @@
-/* Appointment information stays in three columns on desktop. */
-.appointment-row { display: grid; grid-template-columns: 96px 1fr 280px; gap: 24px; }
-.appointment-row h3 { margin-top: 12px; }
-.visit-card .button { margin-top: 16px; margin-right: 8px; }
-@media (max-width: 1150px) { .appointment-row { grid-template-columns: 1fr; } }
+/* .appointment-row: used on Appointments; places the doctor portrait, visit description and appointment time in columns. */
+.appointment-row {
+    display: grid;
+    grid-template-columns: 96px 1fr 280px;
+    gap: 24px;
+}
+
+/* .appointment-row h3: used on Appointments; adds space above the doctor name in an appointment row. */
+.appointment-row h3 {
+    margin-top: 12px;
+}
+
+/* .visit-card .button: used on Appointments; separates the medicine and report links inside the visit-preparation card. */
+.visit-card .button {
+    margin-top: 16px;
+    margin-right: 8px;
+}
+
+/* @media (max-width: 1150px): applies the following layout changes on screens up to 1150px wide. */
+@media (max-width: 1150px) {
+    /* .appointment-row: used on Appointments; stacks the doctor portrait, visit details and appointment time on screens up to 1150px. */
+    .appointment-row {
+        grid-template-columns: 1fr;
+    }
+
+}

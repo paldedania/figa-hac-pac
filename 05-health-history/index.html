@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health history &amp; reports | MedRemind</title>
-    <link rel="icon" href="../01-today/assets/logo.png">
-    <!-- Shared styles first, then this page's styles. -->
-    <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="site">
-        <!-- The same sidebar links appear on all seven pages. -->
-        <aside class="sidebar">
-            <a class="brand" href="../index.html"><img class="logo" src="../01-today/assets/logo.png" alt="">MedRemind</a>
-            <nav class="navigation">
+    <!-- head: sets the page title, character encoding, mobile viewport, icon and stylesheet links. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Health history &amp; reports | MedRemind</title>
+        <link rel="icon" href="../01-today/assets/logo.png">
+        <!-- Loads global.css for shared styles on every page. -->
+        <link rel="stylesheet" href="../global.css">
+        <!-- Loads this page's style.css for the Health history & reports layout. -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- body: contains the visible Health history & reports page. -->
+    <body>
+        <!-- div.site: contains the sidebar and the main content column for this page. -->
+        <div class="site">
+            <!-- aside.sidebar: contains the brand, page navigation and account details. -->
+            <aside class="sidebar">
+                <!-- a.brand: groups the logo and MedRemind name in a link back to Today. -->
+                <a class="brand" href="../index.html"><img class="logo" src="../01-today/assets/logo.png" alt="">MedRemind</a>
+                <!-- nav.navigation: contains links to all seven pages; active marks this page and emergency-link outlines Emergency help. -->
+                <nav class="navigation">
                     <a class="" href="../index.html">Today</a>
                     <a class="" href="../02-my-medicines/index.html">My medicines</a>
                     <a class="" href="../03-add-medicine/index.html">Add medicine</a>
@@ -22,44 +28,88 @@
                     <a class="active" href="../05-health-history/index.html">Health history &amp; reports</a>
                     <a class="" href="../06-profile-accessibility/index.html">Profile &amp; accessibility</a>
                     <a class="emergency-link" href="../07-emergency-help/index.html">Emergency help</a>
-            </nav>
-            <div class="account">
-                <img class="avatar" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
-                <strong>Eleanor Brooks</strong>
-                <p class="muted">Personal account</p>
+                </nav>
+                <!-- div.account: groups Eleanor Brooks's picture, name and account description. -->
+                <div class="account">
+                    <img class="avatar" src="../01-today/assets/eleanor.png" alt="Eleanor Brooks">
+                    <strong>Eleanor Brooks</strong>
+                    <p class="muted">Personal account</p>
+                </div>
+            </aside>
+            <!-- div.content: contains the top bar, main page sections and footer beside the sidebar. -->
+            <div class="content">
+                <!-- header.topbar: groups the tracker label and demonstration-account label. -->
+                <header class="topbar">
+                    <p class="muted">Personal health tracker</p>
+                    <strong>Demonstration account</strong>
+                </header>
+                <!-- main: contains the Health history & reports page content after the shared top bar. -->
+                <main>
+                    <!-- div.page-heading: groups the page title and subtitle. -->
+                    <div class="page-heading">
+                        <h1>Health history &amp; reports</h1>
+                        <p class="subtitle">Recent readings and saved documents for your reference.</p>
+                    </div>
+                    <h2 class="reading-title">Recent health readings</h2>
+                    <!-- div.readings: groups the blood-pressure and blood-glucose cards. -->
+                    <div class="readings">
+                        <!-- article.card: contains the Blood pressure section and its related information. -->
+                        <article class="card">
+                            <h3>Blood pressure</h3>
+                            <p><strong class="reading-value accent">128/78</strong><span class="muted">mmHg</span></p>
+                            <p class="muted">10 October 2026 &bull; Sample reading</p>
+                        </article>
+                        <!-- article.card: contains the Blood glucose section and its related information. -->
+                        <article class="card">
+                            <h3>Blood glucose</h3>
+                            <p><strong class="reading-value accent">108</strong><span class="muted">mg/dL</span></p>
+                            <p class="muted">10 October 2026 &bull; Sample reading</p>
+                        </article>
+                    </div>
+                    <!-- div.section-heading: groups a section title with its count or action link. -->
+                    <div class="section-heading">
+                        <h2>Saved reports</h2>
+                        <span class="muted">2 reports</span>
+                    </div>
+                    <!-- article.report-row: groups a report image, document details and expandable preview. -->
+                    <article class="card report-row">
+                        <img class="card-image" src="../01-today/assets/report-medicine.png" alt="">
+                        <!-- Unnamed div inside article.card.report-row: groups the report title, date and document description. -->
+                        <div>
+                            <h3>Medicine review report</h3>
+                            <p class="muted">2 October 2026</p>
+                            <p class="muted">Demonstration document &bull; Preview</p>
+                        </div>
+                        <!-- details: opens and closes this report preview using native HTML, without JavaScript. -->
+                        <details>
+                            <!-- summary.button: is the clickable heading that toggles the report preview. -->
+                            <summary class="button">View report</summary>
+                            <p class="muted">Sample report for Eleanor Brooks. Demonstration content.</p>
+                        </details>
+                    </article>
+                    <!-- article.report-row: groups a report image, document details and expandable preview. -->
+                    <article class="card report-row">
+                        <img class="card-image" src="../01-today/assets/report-blood.png" alt="">
+                        <!-- Unnamed div inside article.card.report-row: groups the report title, date and document description. -->
+                        <div>
+                            <h3>Blood test report</h3>
+                            <p class="muted">20 September 2026</p>
+                            <p class="muted">Demonstration document &bull; Preview</p>
+                        </div>
+                        <!-- details: opens and closes this report preview using native HTML, without JavaScript. -->
+                        <details>
+                            <!-- summary.button: is the clickable heading that toggles the report preview. -->
+                            <summary class="button">View report</summary>
+                            <p class="muted">Sample report for Eleanor Brooks. Demonstration content.</p>
+                        </details>
+                    </article>
+                    <p class="note">These sample readings and reports do not provide a diagnosis or clinical advice.</p>
+                </main>
+                <!-- footer: identifies the people and health records as demonstration content. -->
+                <footer>
+                    Demonstration content &bull; Fictional people and sample health data. Not clinical advice.
+                </footer>
             </div>
-        </aside>
-        <div class="content">
-            <header class="topbar">
-                <p class="muted">Personal health tracker</p>
-                <strong>Demonstration account</strong>
-            </header>
-            <main>
-                <div class="page-heading">
-                    <h1>Health history &amp; reports</h1>
-                    <p class="subtitle">Recent readings and saved documents for your reference.</p>
-                </div>
-                <h2 class="reading-title">Recent health readings</h2>
-                <div class="readings">
-                    <article class="card"><h3>Blood pressure</h3><p><strong class="reading-value accent">128/78</strong> <span class="muted">mmHg</span></p><p class="muted">10 October 2026 &bull; Sample reading</p></article>
-                    <article class="card"><h3>Blood glucose</h3><p><strong class="reading-value accent">108</strong> <span class="muted">mg/dL</span></p><p class="muted">10 October 2026 &bull; Sample reading</p></article>
-                </div>
-                <div class="section-heading"><h2>Saved reports</h2><span class="muted">2 reports</span></div>
-                <!-- Details and summary open the previews without JavaScript. -->
-                <article class="card report-row">
-                    <img class="card-image" src="../01-today/assets/report-medicine.png" alt="">
-                    <div><h3>Medicine review report</h3><p class="muted">2 October 2026</p><p class="muted">Demonstration document &bull; Preview</p></div>
-                    <details><summary class="button">View report</summary><p class="muted">Sample report for Eleanor Brooks. Demonstration content.</p></details>
-                </article>
-                <article class="card report-row">
-                    <img class="card-image" src="../01-today/assets/report-blood.png" alt="">
-                    <div><h3>Blood test report</h3><p class="muted">20 September 2026</p><p class="muted">Demonstration document &bull; Preview</p></div>
-                    <details><summary class="button">View report</summary><p class="muted">Sample report for Eleanor Brooks. Demonstration content.</p></details>
-                </article>
-                <p class="note">These sample readings and reports do not provide a diagnosis or clinical advice.</p>
-            </main>
-            <footer>Demonstration content &bull; Fictional people and sample health data. Not clinical advice.</footer>
         </div>
-    </div>
-</body>
+    </body>
 </html>
