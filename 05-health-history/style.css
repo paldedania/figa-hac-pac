@@ -1,0 +1,21 @@
+/* Health history: metric cards and document previews. */
+.readings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding-top: 8px; }
+.reading-card h3 { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.reading-card h3 .icon { color: var(--accent); width: 28px; height: 28px; flex-basis: 28px; }
+.reading-card > p { display: flex; gap: 16px; align-items: baseline; }
+.reading-card > p + p { margin-top: 16px; }
+.reading-value { color: var(--accent); font-size: 32px; }
+.saved-reports { margin-top: 32px; }
+.saved-reports .stack { gap: 16px; padding-top: 8px; }
+.report-row { display: flex; align-items: center; gap: 24px; }
+.report-row .art-tile { width: 96px; height: 96px; }
+.report-details { flex: 1; }
+.report-details p { margin-top: 8px; }
+@media (max-width: 1100px) { .report-row { flex-wrap: wrap; } .report-row .button { margin-left: 120px; } }
+@media (max-width: 560px) {
+  .readings-grid { grid-template-columns: 1fr; }
+  .report-row { gap: 16px; }
+  .report-row .art-tile { width: 64px; height: 64px; flex-basis: 64px; }
+  .report-row .art-tile img { width: 48px; height: 48px; }
+  .report-row .button { width: 100%; margin-left: 0; }
+}

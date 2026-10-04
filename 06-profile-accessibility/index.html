@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1426">
+  <meta name="description" content="MedRemind demonstration: Profile &amp; accessibility.">
+  <title>Profile &amp; accessibility | MedRemind</title>
+  <link rel="icon" href="../01-today/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../global.js" defer></script>
+</head>
+<body data-page="06-profile-accessibility">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="MedRemind sidebar">
+      <a class="brand" href="../index.html"><img src="../01-today/assets/logo.svg" alt="" width="40" height="40">MedRemind</a>
+      <nav class="main-nav" aria-label="Main navigation"><a class="nav-link" href="../index.html"><svg class="icon" data-icon="home" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-8h6v8"/></svg><span>Today</span></a>
+<a class="nav-link" href="../02-my-medicines/index.html"><svg class="icon" data-icon="pill" viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(45 12 12)"><rect x="7" y="1" width="10" height="22" rx="5"/><path d="M7 12h10"/></g></svg><span>My medicines</span></a>
+<a class="nav-link" href="../03-add-medicine/index.html"><svg class="icon" data-icon="plus" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>Add medicine</span></a>
+<a class="nav-link" href="../04-appointments/index.html"><svg class="icon" data-icon="calendar" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 13h1M12 13h1M17 13h1M7 17h1M12 17h1M17 17h1"/></svg><span>Appointments</span></a>
+<a class="nav-link" href="../05-health-history/index.html"><svg class="icon" data-icon="clipboard" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="16" rx="2"/><rect x="8" y="2" width="8" height="5" rx="1"/><path d="M9 12h6M9 16h6"/></svg><span>Health history &amp; reports</span></a>
+<a class="nav-link" href="../06-profile-accessibility/index.html" aria-current="page"><svg class="icon" data-icon="user" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span>Profile &amp; accessibility</span></a>
+<a class="nav-link emergency" href="../07-emergency-help/index.html"><svg class="icon" data-icon="phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v3a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2h3l2 5-3 2a14 14 0 0 0 7 7l2-3z"/></svg><span>Emergency help</span></a></nav>
+      <a class="account" href="../06-profile-accessibility/index.html"><img src="../01-today/assets/eleanor.svg" alt="" width="48" height="48"><div><strong>Eleanor Brooks</strong><p>Personal account</p></div></a>
+    </aside>
+    <div class="main-column">
+      <header class="topbar"><p>Personal health tracker</p><p class="demo-label"><svg class="icon" data-icon="shield" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 3v6c0 5-8 11-8 11S4 16 4 11V5z"/><path d="m8 11 3 3 5-5"/></svg>Demonstration account</p></header>
+      <main id="main">
+        <div class="page-heading"><div><h1>Profile &amp; accessibility</h1><p>Your details and preferences, set up for you.</p></div></div>
+        <div class="profile-layout"><div class="stack profile-information"><section class="card profile-card"><h2>Your profile</h2><img src="../01-today/assets/eleanor.svg" alt="Fictional patient illustration" width="96" height="96"><h3>Eleanor Brooks</h3><p class="muted">Fictional patient • Personal account</p></section><section class="card contact-card"><h2>Emergency contact</h2><h3>Anna Brooks</h3><p class="muted">Daughter</p><p class="line-item"><svg class="icon" data-icon="phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v3a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2h3l2 5-3 2a14 14 0 0 0 7 7l2-3z"/></svg>(202) 555-0146</p><hr class="divider"><p class="muted">This contact is also shown in Emergency help.</p></section></div><form id="preferences-form" class="preferences-form"><section class="card accessibility-card"><h2>Accessibility</h2><fieldset class="text-size"><legend>Text size</legend><div class="size-options"><label class="choice"><input type="radio" name="textSize" value="standard" checked><span><svg class="icon" data-icon="check-circle" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Standard 20px</span></label><label class="choice"><input type="radio" name="textSize" value="large"><span><svg class="icon" data-icon="check-circle" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Large 24px</span></label></div></fieldset><div class="contrast-option"><div><h3>High contrast</h3><p class="muted">Increase contrast for easier reading.</p></div><button class="button" type="button" id="contrast-toggle" aria-pressed="false">Off</button></div></section><section class="card reminder-card"><h2>Reminder preferences</h2><label class="preference"><input name="medicineReminders" type="checkbox" checked><span><svg class="icon" data-icon="check-circle" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Medicine reminders • <b data-state>On</b></span></label><label class="preference"><input name="appointmentReminders" type="checkbox" checked><span><svg class="icon" data-icon="check-circle" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Appointment reminders • <b data-state>On</b></span></label><label class="preference"><input name="sound" type="checkbox"><span><svg class="icon" data-icon="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4 6 8H3v8h3l5 4zM16 9l5 6M21 9l-5 6"/></svg>Reminder sound • <b data-state>Off</b></span></label></section><button class="button primary save-preferences" type="submit"><svg class="icon" data-icon="check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Save preferences</button><p class="status-message" id="preferences-feedback" role="status"></p></form></div>
+      </main>
+      <footer class="page-footer">Demonstration content • Fictional people and sample health data. Not clinical advice.</footer>
+    </div>
+  </div>
+</body>
+</html>

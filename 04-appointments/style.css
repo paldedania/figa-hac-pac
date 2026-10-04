@@ -1,0 +1,18 @@
+/* Appointments: clinician details and visit preparation. */
+.appointment-main { display: flex; align-items: center; gap: 24px; }
+.doctor-portrait { width: 96px; height: 96px; flex: 0 0 96px; }
+.doctor-name { flex: 1; }
+.doctor-name p { margin-top: 12px; }
+.appointment-datetime { min-width: 280px; }
+.appointment-card .divider { margin-top: 24px; }
+.visit-preparation { margin-top: 32px; }
+.visit-preparation > h2 { margin-bottom: 16px; }
+.visit-preparation .button-row { margin-top: 16px; }
+@media (max-width: 1150px) {
+  .appointment-main { flex-wrap: wrap; }
+  .appointment-datetime { flex-basis: 100%; min-width: 0; }
+}
+@media (max-width: 480px) {
+  .appointment-main { gap: 16px; }
+  .doctor-portrait { width: 72px; height: 72px; flex-basis: 72px; }
+}

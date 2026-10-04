@@ -1,0 +1,28 @@
+/* Profile: patient information and accessible native form controls. */
+.profile-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px; align-items: start; }
+.profile-card img { display: block; width: 96px; height: 96px; margin-bottom: 20px; }
+.profile-card p { margin-top: 16px; }
+.contact-card h3 { margin-bottom: 16px; }
+.contact-card .line-item { margin-top: 16px; }
+.contact-card .divider { margin: 20px 0 16px; }
+.preferences-form { display: grid; gap: 24px; }
+.text-size { border: 0; padding: 0; margin: 0; min-width: 0; }
+.text-size legend { padding: 0; margin-bottom: 16px; font-weight: 700; }
+.size-options { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.choice, .preference { position: relative; cursor: pointer; }
+.choice input, .preference input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.choice span, .preference span { display: flex; align-items: center; gap: 12px; min-height: 60px; border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; background: var(--background); }
+.choice input:checked + span, .preference input:checked + span { border-color: var(--accent); background: var(--raised); font-weight: 700; }
+.choice input:checked + span .icon, .preference input:checked + span .icon { color: var(--accent); }
+.choice input:focus-visible + span, .preference input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 4px; }
+.choice input:not(:checked) + span svg path, .preference input:not(:checked) + span svg[data-icon="check-circle"] path { visibility: hidden; }
+.contrast-option { display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid var(--border); padding-top: 20px; margin-top: 16px; }
+.contrast-option h3 { font-size: 20px; }
+.contrast-option p { margin-top: 8px; }
+.contrast-option .button { min-width: 88px; }
+.reminder-card { display: grid; gap: 16px; }
+.reminder-card > h2 { margin-bottom: 0; }
+.preference b { font-weight: inherit; margin-left: -6px; }
+.save-preferences { justify-self: start; }
+@media (max-width: 1150px) { .profile-layout { grid-template-columns: 1fr; } .profile-information { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .profile-information, .size-options { grid-template-columns: 1fr; } .contrast-option { flex-wrap: wrap; } }

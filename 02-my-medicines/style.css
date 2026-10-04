@@ -1,0 +1,23 @@
+/* My medicines: full-width prescription rows. */
+.medicine-row { display: grid; grid-template-columns: 96px minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1.8fr); gap: 24px; align-items: center; }
+.medicine-row .art-tile { width: 96px; height: 96px; }
+.medicine-schedule .line-item { margin-top: 8px; white-space: nowrap; }
+.medicine-instructions > p + p { margin-top: 8px; }
+.medicine-list { gap: 16px; padding-top: 8px; }
+.medicine-advice { margin-top: 32px; }
+.medicine-advice .line-item { gap: 20px; }
+.medicine-advice .line-item > .icon { width: 32px; height: 32px; flex-basis: 32px; }
+.medicine-advice h3 { font-size: 20px; }
+.medicine-advice h3 + p { margin-top: 8px; }
+.medicine-advice .divider { margin: 20px 0 16px; }
+@media (max-width: 1150px) {
+  .medicine-row { grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+  .medicine-row .art-tile { width: 80px; height: 80px; }
+  .medicine-instructions { grid-column: 2 / -1; }
+}
+@media (max-width: 560px) {
+  .medicine-row { grid-template-columns: 64px minmax(0, 1fr); gap: 16px; }
+  .medicine-row .art-tile { width: 64px; height: 64px; }
+  .medicine-row .art-tile img { width: 48px; height: 48px; }
+  .medicine-schedule, .medicine-instructions { grid-column: 1 / -1; }
+}
